@@ -30,8 +30,6 @@ export var settings = {
           }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
-
       },
       {
         header: 'GAChoropleth Test',
@@ -61,7 +59,6 @@ export var settings = {
           showGraticule: true
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
       }
     ],
     middleFirst: [
@@ -126,7 +123,6 @@ export var settings = {
         spline: {
           height: 50,
         },
-        fetchData: {type:'function', name: 'getData'},
         metric: 'getRandomMetric'
       }
     ],
@@ -152,7 +148,6 @@ export var settings = {
         spline: {
           height: 50,
         },
-        fetchData: {type:'function', name: 'getData'},
         metric: 'getRandomMetric'
       }
     ],
@@ -178,7 +173,6 @@ export var settings = {
         spline: {
           height: 50,
         },
-        fetchData: {type:'function', name: 'getData'},
         metric: 'getRandomMetric'
       }
     ],
@@ -201,7 +195,6 @@ export var settings = {
           }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'}
       },
       {
         type: 'GATable',
@@ -260,7 +253,6 @@ export var settings = {
           }
         },
         cardStyle: 'card',
-        fetchData: {type:'function', name: 'getData'},
       },
       {
         header: 'This is an awesome text',
