@@ -1,4 +1,5 @@
 import {timeFormat as d3_timeFormat} from 'd3-time-format';
+import colorbrewer from 'colorbrewer';
 
 export var settings = {
   title: 'Georgia Reports',
@@ -37,17 +38,23 @@ export var settings = {
         header: 'GAChoropleth Test',
         type: 'GAChoropleth',
         settings: {
-          colors:['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'pink','violet', 'darkmagenta'],
+          colors:colorbrewer.OrRd[9],
           cssPath: '/static/choropleth.css',
           showTooltip: {true},
+          tooltip: {
+            label: 'Unemployment'
+          },
           domainField: 'rate',
           levels: 9,
           domainLower: 0,
           domainUpper: .15,
           legendHeader: "Per Cent Unemploytment by U.S. County",
+          legendValFormat: '%', // format string for d3.format function
+          legendValPrecision: 3, // Defaults to 2
           width: 1200,
           height: 600,
           domainKey: 'id',
+          domainMapKey: 'id',
           dataset: {
             backend: 'csv',
             url: '/data/unemployment.tsv',
