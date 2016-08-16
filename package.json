@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build_dkan": "./scripts/build_dkan.sh",
-    "build_standalone": "./scripts/build_standalone.sh",
-    "dev_dkan": "./scripts/dev_dkan.sh",
-    "dev_standalone": "./scripts/dev_standalone.sh",
+    "build_dkan": "export MODE='production' && ./node_modules/.bin/webpack --config 'webpack.config.dkan.js'",
+    "build_standalone": "export MODE='production' && ./node_modules/.bin/webpack --config 'webpack.config.standalone.js --progress'",
+    "dev_dkan": "export MODE='development' && ./node_modules/.bin/webpack --config webpack.config.dkan.js --watch",
+    "dev_standalone": "export MODE='development' && node server",
     "test": "./node_modules/karma/bin/karma start --single-run --no-auto-watch karma.config.js",
     "test_watch": "./node_modules/karma/bin/karma start --auto-watch --no-single-run karma.config.js",
     "lint": "./node_modules/.bin/eslint ."

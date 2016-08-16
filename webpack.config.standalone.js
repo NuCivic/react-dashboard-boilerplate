@@ -27,7 +27,7 @@ if(MODE === 'production') {
 module.exports = {
   entry: './src/standalone',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'static'),
     filename: 'bundle.min.js',
     publicPath: '/static/'
   },
